@@ -1,5 +1,6 @@
 <?php 
-include'connection.php';
+session_start();
+$mysqli= new mysqli("localhost","root","","employees_management") or die("connection_aborted");
 
 $is_invalid = false;
 
