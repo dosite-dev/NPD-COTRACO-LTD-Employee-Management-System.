@@ -1,5 +1,5 @@
 <?php
-include'connection.php';
+include 'connection.php';
 // validation for name
 if (empty($_POST["username"])){
     die ("Username is required");

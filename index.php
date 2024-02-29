@@ -1,6 +1,13 @@
 <?php
-include'connection.php';
+include 'connection.php';
 session_start();
+if (!isset($_SESSION['username'])) {
+	echo"<script>
+
+//alert('not identified')
+//	</script>";
+	header("location:signin.php");
+}
 // print_r($_SESSION);
 
 if(isset($_SESSION["user_id"])){
