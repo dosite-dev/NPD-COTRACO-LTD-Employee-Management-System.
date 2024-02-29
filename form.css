@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    padding:20px;
+    
+}
+h1,h2{
+    color:#f09f08;
+}
+
+h2{
+    padding-bottom: 30px;
+}
+fieldset{
+    padding:10px;
+    width: 30%;
+    border-radius: 10px;
+    box-shadow:0 6px 10px #f09f08 ;
+}
+button{
+    background-color: #f09f08;
+    border: none;
+    width: 60px;
+    border-radius: 5px;
+    
+}
+a{
+    color: #f09f08;
+
+}
+input{
+    border-radius: 2px;
+    border-color: azure;
+}
