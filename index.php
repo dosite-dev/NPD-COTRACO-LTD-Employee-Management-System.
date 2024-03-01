@@ -1,13 +1,13 @@
 <?php
 include 'connection.php';
 session_start();
-if (!isset($_SESSION['username'])) {
-	echo"<script>
+// if (!isset($_SESSION['username'])) {
+// 	echo"<script>
 
-//alert('not identified')
-//	</script>";
-	header("location:signin.php");
-}
+// //alert('not identified')
+// //	</script>";
+// 	header("location:signin.php");
+// }
 // print_r($_SESSION);
 
 if(isset($_SESSION["user_id"])){
@@ -50,8 +50,9 @@ if(isset($_SESSION["user_id"])){
             <a href="logout.php">logout</a>
 
 
-            <?php else: ?>
-            <p><a href="signin.php">SignIn</a></p>
+            <?php else:
+                header("location:signin.php");?>
+            <!-- <p><a href="signin.php">SignIn</a></p> -->
 
             <?php endif; ?>
             </div>

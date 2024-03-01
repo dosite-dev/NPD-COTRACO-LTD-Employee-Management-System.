@@ -15,7 +15,7 @@ if($user){
         session_regenerate_id();
 
         $_SESSION["user_id"]=$user["id"];
-        header("location:index.php");
+     header("location:index.php");
         exit;
     }
 }
