@@ -1,6 +1,6 @@
 <?php 
 session_start();
-$mysqli= new mysqli("localhost","root","","employees_management") or die("connection_aborted");
+include 'connection.php';
 
 $is_invalid = false;
 
@@ -15,7 +15,7 @@ if($user){
         session_regenerate_id();
 
         $_SESSION["user_id"]=$user["id"];
-        header("location:index.php");
+     header("location:index.php");
         exit;
     }
 }
@@ -40,6 +40,8 @@ $is_invalid = true;
 <body>
     <div>
         <h1>NPD COTRACO LTD</h1>
+        <a href="index.html">DASHBOARD PAGE</a>
+
     </div>
     <div>
         <center>

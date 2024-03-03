@@ -1,16 +1,17 @@
 <?php
 include 'connection.php';
 session_start();
-if (!isset($_SESSION['username'])) {
-	echo"<script>
+// if (!isset($_SESSION['username'])) {
+// 	echo"<script>
 
-//alert('not identified')
-//	</script>";
-	header("location:signin.php");
-}
+// //alert('not identified')
+// //	</script>";
+// 	header("location:signin.php");
+// }
 // print_r($_SESSION);
 
-if(isset($_SESSION["user_id"])){
+if(isset($_SESSION["user_id"]))
+{
     $sql = "SELECT * FROM signup WHERE id = {$_SESSION["user_id"]}";
 
     $result = $mysqli->query($sql);
@@ -38,6 +39,8 @@ if(isset($_SESSION["user_id"])){
 
     <div>
         <h1>NPD COTRACO LTD</h1>
+        <a href="index.html">DASHBOARD PAGE</a>
+
 
     </div>
 
@@ -46,12 +49,13 @@ if(isset($_SESSION["user_id"])){
             <div>
             <?php if(isset($user)): ?>
 
-            <p >WELCOME <?= $user["username"]?>.</p>
+            <p >WELCOME <?= $user["username"]?>.</p>   
             <a href="logout.php">logout</a>
 
 
-            <?php else: ?>
-            <p><a href="signin.php">SignIn</a></p>
+            <?php else:
+                header("location:signin.php");?>
+            <!-- <p><a href="signin.php">SignIn</a></p> -->
 
             <?php endif; ?>
             </div>
