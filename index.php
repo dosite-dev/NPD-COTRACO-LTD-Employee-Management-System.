@@ -10,7 +10,8 @@ session_start();
 // }
 // print_r($_SESSION);
 
-if(isset($_SESSION["user_id"])){
+if(isset($_SESSION["user_id"]))
+{
     $sql = "SELECT * FROM signup WHERE id = {$_SESSION["user_id"]}";
 
     $result = $mysqli->query($sql);
@@ -38,6 +39,8 @@ if(isset($_SESSION["user_id"])){
 
     <div>
         <h1>NPD COTRACO LTD</h1>
+        <a href="index.html">DASHBOARD PAGE</a>
+
 
     </div>
 
@@ -46,7 +49,7 @@ if(isset($_SESSION["user_id"])){
             <div>
             <?php if(isset($user)): ?>
 
-            <p >WELCOME <?= $user["username"]?>.</p>
+            <p >WELCOME <?= $user["username"]?>.</p>   
             <a href="logout.php">logout</a>
 
 

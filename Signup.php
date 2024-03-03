@@ -24,6 +24,8 @@ include 'connection.php';
 
     <div>
         <h1>NPD COTRACO LTD</h1>
+        <a href="index.html">DASHBOARD PAGE</a>
+
     </div>
     <div>
         <center>
@@ -36,7 +38,7 @@ include 'connection.php';
                     <input type="password" name="password1" id="password1" placeholder="Enter Your Password"><br><br>
                     <input type="password" name="password2" id="password2" placeholder="Confirm your Password"><br>
                     <button type="submit">SignUp</button><br><br>
-                    Click<a href="signin.html">here</a> If You Already have an Account
+                    Click<a href="signin.php">here</a> If You Already have an Account
 
                 </form>
             </fieldset>
